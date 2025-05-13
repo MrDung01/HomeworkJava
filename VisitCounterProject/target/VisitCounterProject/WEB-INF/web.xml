@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="https://jakarta.ee/xml/ns/jakartaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd"
+         version="6.0">
+    <servlet>
+        <servlet-name>VisitCounterServlet</servlet-name>
+        <servlet-class>VisitCounterServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>VisitCounterServlet</servlet-name>
+        <url-pattern>/visitCounter</url-pattern>
+    </servlet-mapping>
+    
+    <filter>
+        <filter-name>VisitFilter</filter-name>
+        <filter-class>VisitFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>VisitFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+    
+    <listener>
+        <listener-class>ContextListener</listener-class>
+    </listener>
+    
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+</web-app>
