@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Chào mừng</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Thông điệp chào mừng</h1>
+        <p>Thông điệp: <span th:text="${greeting.message}"></span></p>
+        <p>Thời gian: <span class="time" th:text="${greeting.time}"></span></p>
+    </div>
+</body>
+</html>
